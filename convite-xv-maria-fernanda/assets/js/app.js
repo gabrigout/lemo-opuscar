@@ -41,10 +41,9 @@ const CONFIG = {
   },
 
   /* ----- WhatsApp que recebe confirmações, músicas e recados -----
-     >>> TROQUE: DDD + número, só dígitos. Ex.: "91988887777"
-     (o 55 do Brasil é colocado sozinho). Enquanto estiver vazio, o WhatsApp
-     abre pedindo para escolher o contato — serve só para testar.            */
-  whatsapp: "",                   // [COLOCAR NÚMERO COM DDD]
+     DDD + número, só dígitos. Ex.: "91988887777" (o 55 do Brasil é colocado
+     sozinho). Se ficar vazio, o WhatsApp abre pedindo para escolher o contato. */
+  whatsapp: "91985204553",
 
   /* ----- Música de fundo: arquivo assets/musica.mp3 (troque o arquivo) ----- */
   musica: {
@@ -52,20 +51,31 @@ const CONFIG = {
   },
 
   /* ----- Presentes -----
-     Preencha UMA das opções (ou as duas):
-       itens:   lista de sugestões, uma por linha
-       linkUrl: link para uma lista online (ex.: loja, lista de casamento/aniversário)  */
+     grupos: cada grupo tem titulo, nota (opcional) e itens.
+             "linha: true" mostra os itens em uma linha só, separados por " · " (bom para marcas/lojas).
+     Também dá para usar o link de uma lista online (linkUrl) ou uma lista simples (itens). */
   presentes: {
     aviso: "Lembrando que são apenas sugestões, e sua presença é o maior presente",
-    itens: [],                    // ex.: ["Perfume", "Livro", "Joia delicada"]
-    linkUrl: "",                  // ex.: "https://..."
+    grupos: [
+      { titulo: "Roupas", itens: ["Blusa tamanho P", "Body tamanho M", "Short saia tamanho M/38", "Roupa de academia"] },
+      { titulo: "Calçados", nota: "36/37", itens: ["Tênis tamanho 37", "Sandália tamanho 36"] },
+      { titulo: "Acessórios", nota: "prata ou dourado", itens: ["Anéis", "Brincos", "Colares", "Pulseiras/braceletes", "Bolsas"] },
+      { titulo: "Perfumes e corpo", itens: ["Perfumes / body splash (adoro perfume doce)", "Hidratante corporal"] },
+      { titulo: "Sugestões de maquiagem", nota: "marcas", linha: true,
+        itens: ["Oceane", "Rare Beauty", "Mari Maria", "Boca Rosa", "Franciny Ehlke", "Bruna Tavares", "Huda Beauty", "Too Faced", "O Boticário", "Essence", "Dior", "Nars"] },
+      { titulo: "Sugestões de loja", linha: true,
+        itens: ["Sephora", "O Boticário", "We Pink", "Bel Cosméticos", "Renner", "C&A", "Zara", "Santa Lolla", "Sapatinho de Luxo", "Arezzo"] },
+    ],
+    itens: [],                    // lista simples (opcional), além dos grupos
+    linkUrl: "",                  // link de lista online (opcional)
     linkTexto: "Ver lista de presentes",
     textoVazio: "[PLACEHOLDER] Coloque aqui a lista de presentes ou o link da lista, em CONFIG.presentes.",
   },
 
   /* ----- Confirmação de presença ----- */
   rsvp: {
-    maxPessoas: 10,               // limite do seletor de quantidade
+    maxPessoas: 1,                // 1 = convite individual (esconde o seletor de quantidade). Use 2, 3… para permitir acompanhantes.
+    prazo: "2026-12-10",          // AAAA-MM-DD: aparece como "até 10 de dezembro". Deixe "" para não mostrar.
   },
 
   /* ----- Mensagens que abrem no WhatsApp -----
@@ -99,7 +109,7 @@ const CONFIG = {
     menuTitulo: "Estamos esperando por você",
 
     menu: {
-      rsvp:      { titulo: "Confirmar presença",   sub: "Responder pelo WhatsApp" },
+      rsvp:      { titulo: "Confirmar presença",   sub: "Responda até {prazo}" },
       mapa:      { titulo: "Como chegar",          sub: "Abrir no Google Maps" },
       agenda:    { titulo: "Adicionar à agenda",   sub: "Salvar a data com lembrete" },
       presentes: { titulo: "Sugestão de presentes", sub: "Ver sugestões" },
@@ -119,7 +129,7 @@ const CONFIG = {
 
     rsvp: {
       titulo: "Confirmar presença",
-      intro: "Conte para a gente quem vai comemorar com você.",
+      intro: "Confirme sua presença até {prazo}.",
       nomeLabel: "Seu nome",
       qtdLabel: "Quantidade de pessoas",
       qtdDica: "Conte com você. O convite é individual, então só inclua quem foi convidado junto.",
@@ -245,10 +255,22 @@ const CONFIG = {
   /* ------------------------------------------------------------------------
      Textos: preenche tudo que tem data-cfg="caminho.no.CONFIG"
      ------------------------------------------------------------------------ */
+  /** "2026-12-10" → "10 de dezembro" (prazo para confirmar presença) */
+  const prazoTexto = (function () {
+    const p = CONFIG.rsvp.prazo;
+    if (!p) return '';
+    const [, m, d] = p.split('-').map(Number);
+    return d + ' de ' + MESES[m - 1];
+  })();
+
   function renderTextos() {
     $$('[data-cfg]').forEach((el) => {
-      const v = getPath(el.dataset.cfg);
+      let v = getPath(el.dataset.cfg);
       if (v == null) { console.warn('[convite] texto ausente no CONFIG:', el.dataset.cfg); return; }
+      if (typeof v === 'string' && v.indexOf('{prazo}') !== -1) {
+        // sem prazo configurado, o trecho "até {prazo}" simplesmente some
+        v = prazoTexto ? v.replace('{prazo}', prazoTexto) : v.replace(/\s*até\s*\{prazo\}/, '');
+      }
       el.textContent = v;
     });
     document.title = CONFIG.pessoa.titulo + ' · ' + CONFIG.pessoa.nome;
@@ -286,7 +308,32 @@ const CONFIG = {
   function renderPresentes() {
     const box = $('#presentes-corpo');
     const P = CONFIG.presentes;
-    if (P.itens && P.itens.length) {
+    const grupos = P.grupos || [];
+    const temItens = P.itens && P.itens.length;
+
+    grupos.forEach((g) => {
+      const sec = document.createElement('section');
+      sec.className = 'gift-group';
+      const h = document.createElement('h3');
+      h.textContent = g.titulo;
+      if (g.nota) { const n = document.createElement('small'); n.textContent = g.nota; h.appendChild(n); }
+      sec.appendChild(h);
+      if (g.linha) {                                   // marcas/lojas: uma linha corrida
+        const p = document.createElement('p');
+        p.className = 'gift-line';
+        // espaço "preso" dentro de cada nome: "Bel Cosméticos" nunca quebra no meio
+        p.textContent = g.itens.map((it) => it.replace(/ /g, ' ')).join(' · ');
+        sec.appendChild(p);
+      } else {
+        const ul = document.createElement('ul');
+        ul.className = 'gifts';
+        g.itens.forEach((it) => { const li = document.createElement('li'); li.textContent = it; ul.appendChild(li); });
+        sec.appendChild(ul);
+      }
+      box.appendChild(sec);
+    });
+
+    if (temItens) {
       const ul = document.createElement('ul');
       ul.className = 'gifts';
       P.itens.forEach((it) => { const li = document.createElement('li'); li.textContent = it; ul.appendChild(li); });
@@ -299,7 +346,7 @@ const CONFIG = {
       a.textContent = P.linkTexto || 'Abrir';
       box.appendChild(a);
     }
-    if (!(P.itens && P.itens.length) && !P.linkUrl) {
+    if (!grupos.length && !temItens && !P.linkUrl) {
       const d = document.createElement('div');
       d.className = 'placeholder-box'; d.textContent = P.textoVazio;
       box.appendChild(d);
@@ -431,15 +478,19 @@ const CONFIG = {
       btn.setAttribute('aria-label', silencioso ? CONFIG.textos.musicaLigar : CONFIG.textos.musicaSilenciar);
     }
 
+    /** Sobe o volume aos poucos. O volume é sempre mantido entre 0 e 1 (fora disso o navegador dá erro
+        e o fade pararia no meio, deixando a música muda). O iPhone ignora o volume: tudo bem. */
     function fadeTo(alvo, ms) {
-      try {
-        const t0 = performance.now(), v0 = audio.volume;
-        (function passo(t) {
-          const k = Math.min(1, (t - t0) / ms);
-          audio.volume = v0 + (alvo - v0) * k;
-          if (k < 1) requestAnimationFrame(passo);
-        })(t0);
-      } catch (e) { /* iOS ignora volume: tudo bem */ }
+      const limite = (v) => Math.min(1, Math.max(0, v));
+      const t0 = performance.now();
+      let v0 = 0;
+      try { v0 = limite(audio.volume); } catch (e) { return; }
+      function passo(agora) {
+        const k = limite((agora - t0) / ms);            // o relógio do frame pode vir um pouco antes de t0
+        try { audio.volume = limite(v0 + (alvo - v0) * k); } catch (e) { return; }
+        if (k < 1) requestAnimationFrame(passo);
+      }
+      requestAnimationFrame(passo);
     }
 
     function tocar() {
@@ -680,6 +731,7 @@ const CONFIG = {
     const [menos, mais] = $$('.stepper__btn', fr);
     let qtd = 1;
     const max = Math.max(1, CONFIG.rsvp.maxPessoas);
+    if (max <= 1) $('#rsvp-qtd-campo').hidden = true;      // convite individual: não pergunta quantas pessoas
     function pintarQtd() {
       out.textContent = String(qtd);
       menos.disabled = qtd <= 1;
@@ -695,7 +747,7 @@ const CONFIG = {
       const nome = clean(fr.elements.nome.value);
       if (!nome) { erroCampo(fr.elements.nome, 'rsvp-nome-erro', CONFIG.textos.erros.nome); return; }
       Store.set('nome', nome);
-      enviarWhats(fill(CONFIG.mensagens.rsvp, { nome, pessoas: qtd }), fr);
+      enviarWhats(fill(CONFIG.mensagens.rsvp, { nome, pessoas: max > 1 ? qtd : '' }), fr);
     });
 
     /* --- Sugerir uma música --- */

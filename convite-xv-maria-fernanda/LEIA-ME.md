@@ -6,23 +6,34 @@ Site estático (HTML, CSS e JS puros). Não precisa instalar nada para publicar.
 index.html              página (estrutura)
 assets/css/style.css    visual
 assets/js/app.js        ← AQUI ficam data, local, telefone e textos (objeto CONFIG, no topo)
-assets/musica.mp3       música de fundo (placeholder: troque pelo arquivo que você escolher)
+assets/musica.mp3       música de fundo (instrumental; pode trocar pelo arquivo que preferir)
 assets/img/preview.jpg  imagem que aparece quando o link é colado no WhatsApp
 assets/img/favicon.svg  ícone da aba do navegador
 ```
 
-## O que você precisa trocar (antes de publicar)
+## O que já está preenchido
 
-| # | O quê | Onde | Obrigatório? |
-|---|-------|------|--------------|
-| 1 | **Número do WhatsApp** (DDD + número) | `assets/js/app.js` → `whatsapp: ""` (ex.: `"91988887777"`) | **Sim.** Vazio, o WhatsApp abre pedindo para escolher um contato. |
-| 2 | **Música** | Substitua `assets/musica.mp3` (mesmo nome, formato MP3, ideal até ~3 MB) | Recomendado. A que está lá é uma valsa instrumental curta, gerada só como placeholder. |
-| 3 | **Lista ou link de presentes** | `assets/js/app.js` → `presentes.itens` (lista) e/ou `presentes.linkUrl` (link) | **Sim.** Sem isso, a janela mostra o texto `[PLACEHOLDER]`. |
-| 4 | Link da imagem de pré-visualização | `index.html` → `og:image`: troque pelo endereço completo (veja "Depois de publicar") | Opcional, mas deixa o link bonito no WhatsApp. |
-| 5 | Duração da festa (só afeta a agenda) | `assets/js/app.js` → `evento.duracaoHoras` (hoje: 5 horas) | Confira. É uma suposição. |
+| Item | Valor |
+|------|-------|
+| WhatsApp que recebe as respostas | (91) 98520-4553 |
+| Data e hora | quinta-feira, 17 de dezembro de 2026, 21h |
+| Local | Le Lys Maison, Travessa São Francisco, 60, Campina, Belém/PA |
+| Traje | esporte fino |
+| Presentes | lista em grupos (roupas, calçados, acessórios, perfumes, maquiagem, lojas) |
+| Prazo para confirmar | até 10 de dezembro |
+| Convite | individual (não pergunta quantidade de pessoas) |
+| Horário de término | não informado: no calendário do convidado o evento aparece com 5 horas de duração (`evento.duracaoHoras`) |
 
-Tudo o mais (nome, data, hora, local, traje, textos, itens do Manual do Convidado, mensagens do WhatsApp) também está no `CONFIG`, no topo de `assets/js/app.js`. Edite com o Bloco de Notas ou qualquer editor de texto. Mantenha as aspas e as vírgulas.
+## O que ainda dá para ajustar
 
+| O quê | Onde |
+|-------|------|
+| **Música** | Substitua `assets/musica.mp3` (mesmo nome, formato MP3, ideal até ~3 MB). A que está lá é uma valsa instrumental curta, feita só como placeholder. Se usar música de artista, lembre que ela vai ficar pública no site. |
+| Link da imagem de pré-visualização no WhatsApp | `index.html` → `og:image` (troque pelo endereço completo depois de publicar; veja abaixo) |
+| Permitir acompanhantes | `assets/js/app.js` → `rsvp.maxPessoas` (hoje `1`; com `2` ou mais, volta o seletor "quantidade de pessoas") |
+| Prazo, presentes, textos, itens do Manual, mensagens do WhatsApp | `CONFIG`, no topo de `assets/js/app.js` |
+
+Edite com o Bloco de Notas ou qualquer editor de texto. Mantenha as aspas e as vírgulas.
 Se mudar o nome ou a data, ajuste também o `<title>` e as tags `og:` no começo do `index.html`, e refaça `assets/img/preview.jpg` se quiser.
 
 ## Testar no computador
@@ -39,13 +50,14 @@ e abra http://localhost:8000. Para ver no celular, conecte-o na mesma rede Wi-Fi
 ## Publicar de graça e gerar o link para o WhatsApp
 
 ### Opção A — Netlify Drop (mais fácil, ~2 minutos)
-1. Faça as trocas acima.
-2. Abra https://app.netlify.com/drop
-3. Arraste a **pasta inteira** (a que contém o `index.html`) para a área indicada.
+1. Entre em https://app.netlify.com/drop e **crie a conta gratuita primeiro** (pode ser com o Google). Sem estar logado, o link fica protegido por senha temporária e expira.
+2. Já logado, volte para https://app.netlify.com/drop
+3. Arraste a **pasta inteira** (a que contém o `index.html` e a pasta `assets`) para a área indicada.
 4. Em segundos aparece um link como `https://nome-aleatorio.netlify.app`.
-5. Crie uma conta gratuita (ou entre) quando o Netlify pedir: sem conta, o site de teste pode expirar em pouco tempo.
-6. Para um endereço mais bonito: *Site configuration → Change site name* (ex.: `maria-xv`).
-7. Para atualizar depois: aba *Deploys* → arraste a pasta de novo.
+5. Para um endereço mais bonito: *Site configuration → Change site name* (ex.: `maria-xv`).
+6. Para atualizar depois: aba *Deploys* → arraste a pasta de novo. O link continua o mesmo.
+
+No plano gratuito do Netlify, cada publicação custa 15 dos 300 créditos mensais, e o tráfego de ~100 convidados consome muito pouco (cada visita baixa cerca de 0,9 MB). Dá para fazer dezenas de ajustes sem problema. As tarifas mudam de tempos em tempos: confira em https://www.netlify.com/pricing/
 
 ### Opção B — GitHub Pages
 1. Crie uma conta em https://github.com e depois um repositório novo (público), por exemplo `xv-maria`.
@@ -60,6 +72,7 @@ e abra http://localhost:8000. Para ver no celular, conecte-o na mesma rede Wi-Fi
 
 ## Observações técnicas
 
+- Todas as confirmações, músicas e recados chegam no mesmo WhatsApp. Cada mensagem já vem com o nome da pessoa. Com ~100 convidados, considere usar um número só para o convite ou o WhatsApp Business, que permite etiquetar as conversas.
 - A música só começa depois do toque no lacre (regra dos navegadores). O botão no canto superior direito silencia/ativa; a música pausa quando a pessoa sai da página (por exemplo, para o WhatsApp) e volta ao retornar.
 - Em iPhone, o volume da música é o do aparelho (o Safari ignora o controle de volume da página).
 - Para quem ativa "reduzir movimento" no celular, o envelope abre sem a animação longa.
