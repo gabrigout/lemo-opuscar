@@ -68,3 +68,27 @@ Critérios do Tribunal (regra adicional):
 - Os critérios são anunciados na tela antes da análise, com no máximo três, e não mudam depois de começar.
 - Cada critério vai de 0 a 5 para cada lado. A soma aparece no veredito, dentro dos 10 a 15 s.
 - O Goat escolhe pelo total, e o critério fica visível para o público conferir.
+
+---
+
+# Processo da Caixa Preta (quinta-feira)
+
+Curiosidades que quase ninguém conhece. Mesmo formato das outras, sem foco em lenda (isso fica na terça).
+
+Temas:
+- Regra do jogo: como surgiu, o que mudou, o que quase ninguém sabe. A regra é checada no texto oficial (IFAB ou CBF) antes de entrar.
+- Histórias extracampo: fatos verificáveis sobre o futebol fora do gramado, como um episódio de bastidor. Sem vida privada de pessoa real e sem fofoca sem fonte.
+- Origem de tradições: por que existe um costume, uma cor, um gesto ou um símbolo do futebol.
+
+Estrutura:
+- Gancho, de 10 a 15 s: a pergunta ou a afirmação que a gente vai desvendar.
+- Curiosidade, de 30 a 40 s: o fato, contado de forma simples.
+- Contexto, de 10 a 15 s: por que aquilo importa hoje.
+- Fecho, de 5 a 8 s: pergunta específica para comentar.
+- Total: mais de 60 s.
+
+Antes de render:
+- Fato com fonte oficial ou jornalística.
+- Sem texto copiado de outro canal.
+- Nenhuma foto sem licença, nenhum escudo.
+- Roteiro aprovado pelo dono.
