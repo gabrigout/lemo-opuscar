@@ -1,6 +1,6 @@
 # Processo criativo da Prancheta (segunda-feira)
 
-Regra fixa: todo vídeo tem mais de 1 minuto. Nenhum vídeo começa cru: sempre com gancho.
+Regra fixa: todo vídeo tem no mínimo 60 segundos, podendo ser mais. Nenhum vídeo começa cru: sempre com gancho.
 
 ## Ordem do processo (antes de escrever qualquer roteiro)
 1. **Escolher o time.** Pela regra de rodízio: não repetir clube nas últimas quatro semanas. Escolher entre time histórico (ex.: Barcelona de Guardiola) ou time em fase (ex.: últimos 5 a 10 jogos).
@@ -35,7 +35,7 @@ Mesmo processo da Prancheta, com estas diferenças:
 - Só lendas: jogadores aposentados ou de outra época. Jogador do momento não entra, porque vira notícia.
 - O gancho é a história do jogador: quem era, o que fez e por que importa, em frases curtas, sem biografia.
 - Não tem tática no meio. Se a tática aparecer, o vídeo vira Prancheta.
-- Sem foto de jogador real: a imagem é o Goat, uma silhueta ou uma ilustração em linha fina.
+- Fotos de jogador: o dono envia a foto. Só entra se for de fonte livre (domínio público) ou do próprio dono. Eu subo a foto, tiro o fundo, desfoco o fundo e deixo o jogador em destaque. Escudo e camisa oficial são cortados ou apagados antes de subir.
 - Títulos e datas sempre checados em fonte.
 - O mesmo jogador não volta em menos de dois meses, e o clube também tem rodízio.
-- Divisão de tempo, com mais de 60 s no total: gancho de 10 a 15 s, quem era de 20 a 25 s, história ou momento de 20 a 25 s, o que ganhou de 10 a 15 s, fecho de 5 a 8 s.
+- Duração mínima de 60 s, podendo ser mais. Divisão de tempo: gancho de 10 a 15 s, quem era de 20 a 25 s, história ou momento de 20 a 25 s, o que ganhou de 10 a 15 s, fecho de 5 a 8 s.
