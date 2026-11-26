@@ -63,3 +63,8 @@ Regras de revisão antes de render:
 - Fotos só com licença livre, sem escudo.
 - Nenhum texto copiado de outro programa.
 - Roteiro aprovado pelo dono antes de render.
+
+Critérios do Tribunal (regra adicional):
+- Os critérios são anunciados na tela antes da análise, com no máximo três, e não mudam depois de começar.
+- Cada critério vai de 0 a 5 para cada lado. A soma aparece no veredito, dentro dos 10 a 15 s.
+- O Goat escolhe pelo total, e o critério fica visível para o público conferir.
