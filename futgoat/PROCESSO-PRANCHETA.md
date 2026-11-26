@@ -35,7 +35,9 @@ Mesmo processo da Prancheta, com estas diferenças:
 - Só lendas: jogadores aposentados ou de outra época. Jogador do momento não entra, porque vira notícia.
 - O gancho é a história do jogador: quem era, o que fez e por que importa, em frases curtas, sem biografia.
 - Não tem tática no meio. Se a tática aparecer, o vídeo vira Prancheta.
-- Fotos de jogador: o dono envia a foto. Só entra se for de fonte livre (domínio público) ou do próprio dono. Eu subo a foto, tiro o fundo, desfoco o fundo e deixo o jogador em destaque. Escudo e camisa oficial são cortados ou apagados antes de subir.
+- Fotos de jogador e de time: se o dono mandar, uso direto. Se eu procurar, só em fonte com licença livre (Wikimedia Commons ou domínio público). Para cada foto anoto licença, autor e crédito; sem licença que permita uso comercial e crédito, a foto não entra.
+- Escudo nunca entra, mesmo em foto pública (é marca registrada). Se aparecer numa foto, é cortado ou apagado antes de subir.
+- Eu tiro o fundo, desfoco o fundo e deixo o jogador em destaque.
 - Títulos e datas sempre checados em fonte.
 - O mesmo jogador não volta em menos de dois meses, e o clube também tem rodízio.
 - Duração mínima de 60 s, podendo ser mais. Divisão de tempo: gancho de 10 a 15 s, quem era de 20 a 25 s, história ou momento de 20 a 25 s, o que ganhou de 10 a 15 s, fecho de 5 a 8 s.
