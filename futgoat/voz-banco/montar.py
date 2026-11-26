@@ -4,7 +4,7 @@ Uso: python montar.py "texto novo" saida.wav [--sem-gerar]"""
 import json, os, re, sys, unicodedata
 import numpy as np, soundfile as sf
 
-D = os.path.dirname(os.path.abspath(__file__))
+D = os.environ.get("BANCO") or os.path.dirname(os.path.abspath(__file__))
 FADE = 0.015
 
 def norm(w):
