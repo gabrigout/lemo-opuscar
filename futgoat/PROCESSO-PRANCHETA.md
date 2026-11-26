@@ -29,7 +29,7 @@ Toda semana o gancho é atualizado em fonte antes de gravar. Se a fonte não bat
 
 ---
 
-# Processo do Legends (terça-feira)
+# Processo do Heroes (terça-feira)
 
 Mesmo processo da Prancheta, com estas diferenças:
 - Só lendas: jogadores aposentados ou de outra época. Jogador do momento não entra, porque vira notícia.

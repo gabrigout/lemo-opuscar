@@ -10,7 +10,7 @@ Regras:
 
 Cenários por quadro:
 - Segunda, Prancheta: estádio vazio, gramado com linhas, vestiário, corredor do túnel, painel tático. Sem jogadores.
-- Terça, Legends: arquivo antigo de estádio, arquibancada de madeira, cartaz de época, sala de troféus. Sem jogadores reconhecíveis.
+- Terça, Heroes: arquivo antigo de estádio, arquibancada de madeira, cartaz de época, sala de troféus. Sem jogadores reconhecíveis.
 - Quarta, Tribunal do Goat: mesa de debate, sala escura com luz de estúdio, cadeiras, placar apagado.
 - Quinta, Caixa Preta: caixa, cofre, sala de regras, livro antigo, arquivo de recortes de jornal (apenas texturas).
 - Sexta, Giro da Semana: sala de imprensa, painel de notícias, mapa, linha do tempo.
