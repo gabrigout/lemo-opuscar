@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Futgoat vinheta</title>
+<style>@font-face{font-family:Anton;src:url(fonts/anton_Anton-Regular.ttf)}html,body{margin:0;background:#111}canvas{display:block}</style></head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const cv=document.getElementById('c'),g=cv.getContext('2d'),BG='#111111',GOLD='#D4A537',CREAM='#F2E9D8';
+const img=new Image();img.src='logo.png';
+const off=document.createElement('canvas');off.width=off.height=1024;const og=off.getContext('2d');
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),seg=(t,a,b)=>cl((t-a)/(b-a)),eo=t=>1-Math.pow(1-cl(t),3),back=(t,s=1.7)=>{t=cl(t)-1;return 1+t*t*((s+1)*t+s)};
+window.DUR=1.2;
+window.render=(t)=>{
+ g.fillStyle=BG;g.fillRect(0,0,1080,1920);
+ const rp=seg(t,0.03,0.45);if(rp>0&&rp<1){g.strokeStyle=GOLD;g.globalAlpha=1-rp;g.lineWidth=12*(1-rp)+2;g.beginPath();g.arc(540,860,380+520*eo(rp),0,7);g.stroke();g.globalAlpha=1;}
+ const lp=seg(t,0.05,0.45),sc=0.55+0.45*back(lp),al=eo(seg(t,0.05,0.27));
+ og.globalCompositeOperation='source-over';og.clearRect(0,0,1024,1024);og.drawImage(img,0,0,1024,1024);
+ og.globalCompositeOperation='source-atop';const sw=seg(t,0.45,0.8);
+ if(sw>0&&sw<1){const x=-300+1700*sw,gr=og.createLinearGradient(x-120,0,x+120,300);gr.addColorStop(0,'rgba(255,240,200,0)');gr.addColorStop(.5,'rgba(255,240,200,.8)');gr.addColorStop(1,'rgba(255,240,200,0)');og.fillStyle=gr;og.fillRect(0,0,1024,1024);}
+ g.save();g.globalAlpha=al;g.translate(540,860);g.scale(sc,sc);g.drawImage(off,-380,-380,760,760);g.restore();g.globalAlpha=1;
+ const tp=seg(t,0.55,0.85);if(tp>0){g.globalAlpha=eo(tp);g.fillStyle=CREAM;g.font='64px Anton';g.letterSpacing='14px';g.textAlign='center';g.textBaseline='middle';g.fillText('O MELHOR DO FUTEBOL',547,1330+(1-eo(tp))*24);g.globalAlpha=1;}
+};
+Promise.all([new Promise(r=>img.onload=r),document.fonts.load('40px Anton')]).then(()=>window.READY=true);
+</script></body></html>

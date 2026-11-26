@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Futgoat capa</title>
+<style>@font-face{font-family:Anton;src:url(fonts/anton_Anton-Regular.ttf)}html,body{margin:0;background:#111}
+.c{position:relative;width:1080px;height:1920px;background:#111111;overflow:hidden;font-family:Anton;color:#F2E9D8}
+.ring{position:absolute;left:-380px;top:560px;width:1840px;height:1840px;border-radius:50%;border:8px solid rgba(212,165,55,.22)}
+.ring2{position:absolute;left:350px;top:1150px;width:380px;height:380px;border-radius:50%;border:8px solid rgba(212,165,55,.22)}
+.line{position:absolute;left:-10px;right:-10px;top:1336px;height:8px;background:rgba(212,165,55,.22)}
+.tag{position:absolute;left:60px;top:390px;background:#D4A537;color:#111;font-size:50px;padding:8px 26px;border-radius:10px;letter-spacing:2px}
+.l1{position:absolute;left:60px;top:515px;line-height:1}
+.l2{position:absolute;left:60px;top:735px;line-height:.9;color:#D4A537;text-shadow:0 12px 0 rgba(0,0,0,.55)}
+.logo{position:absolute;left:50%;transform:translateX(-50%);top:1190px;width:300px}
+</style></head><body><div class="c" id="c"><div class="ring"></div><div class="ring2"></div><div class="line"></div>
+<div class="tag" id="tag"></div><div class="l1" id="l1"></div><div class="l2" id="l2"></div><img class="logo" src="logo.png"></div>
+<script>
+const Q=new URLSearchParams(location.search);
+const set=(id,k,d,fs)=>{const e=document.getElementById(id);e.textContent=Q.get(k)||d;if(fs)e.style.fontSize=(Q.get(k+'s')||fs)+'px'};
+set('tag','tag','PRANCHETA Nº 1');set('l1','l1','ESSE É O',150);set('l2','l2','2-3-1',430);
+window.DUR=1;window.render=()=>{};Promise.all([new Promise(r=>document.querySelector('.logo').onload=r),document.fonts.load('40px Anton')]).then(()=>window.READY=true);
+</script></body></html>

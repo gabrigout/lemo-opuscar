@@ -1,0 +1,5 @@
+Futgoat · Campo 3D — demo film credits
+- three.js (MIT) via the Lemo-Opuscar library's node_modules.
+- core/lib.js and core/render/*, core/audio/sfx.py from Lemo-Opuscar (MIT licence, see the library).
+- Fonts: Anton (Vernon Adams) and Archivo Black (Omnibus-Type), SIL Open Font License 1.1, from github.com/google/fonts.
+- Music and foley: synthesised in demo/mix.py (no samples).

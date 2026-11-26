@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Archivo;src:url(fonts/archivoblack_ArchivoBlack-Regular.ttf)}
+@font-face{font-family:Anton;src:url(fonts/anton_Anton-Regular.ttf)}
+html,body{margin:0;background:#111}canvas{display:block}</style></head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const cv=document.getElementById('c'),g=cv.getContext('2d');
+const names=['fechada','meia','oval','aberta','surpreso','olhos_fechados_overlay'],I={};
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),seg=(t,a,b)=>cl((t-a)/(b-a)),eo=t=>1-Math.pow(1-cl(t),3),ei=t=>Math.pow(cl(t),3),back=(t,s=1.7)=>{t=cl(t)-1;return 1+t*t*((s+1)*t+s)};
+let SY;
+window.render=(t)=>{
+ const D=SY.dur,fr=Math.min(SY.mouth.length-1,Math.round(t*SY.fps));
+ g.fillStyle='#111111';g.fillRect(0,0,1080,1920);
+ g.strokeStyle='rgba(212,165,55,.3)';g.lineWidth=6;g.strokeRect(120,360,840,1040);g.beginPath();g.moveTo(120,880);g.lineTo(960,880);g.stroke();g.beginPath();g.arc(540,880,130,0,7);g.stroke();
+ g.fillStyle='#D4A537';g.font='60px Anton';g.textAlign='left';g.fillText('PRANCHETA Nº 1',60,260);
+ const ent=seg(t,0.1,0.65),ext=seg(t,D-0.7,D-0.15),up=ent*(1-ext);
+ g.fillStyle='rgba(0,0,0,'+(0.45*up)+')';g.fillRect(0,0,1080,1920);
+ const S=720,x0=10,bottom=1345; let x=x0+S/2+(-760)*(1-back(ent))+(-820)*ei(ext);
+ const idle=ent>=1&&ext<=0; let sx=1+idle*0.008*Math.sin(t*5.2),sy=1-idle*0.008*Math.sin(t*5.2),y=bottom-idle*5*Math.sin(t*3.6),r=idle*0.014*Math.sin(t*2.9)-0.12*(1-eo(ent))-0.1*ei(ext);
+ let state=['fechada','meia','oval'][SY.mouth[fr]||0];
+ const sp=SY.surprise; const surprised=t>=sp[0]&&t<sp[1]; if(surprised){state='surpreso';const q=seg(t,sp[0],sp[0]+0.25);sy+=0.03*Math.sin(q*Math.PI);y-=14*Math.sin(q*Math.PI);}
+ const blink=!surprised&&SY.blinks.some(b=>t>=b&&t<b+0.14);
+ if(g.createRadialGradient){const gr=g.createRadialGradient(x,bottom-S*0.5,S*0.1,x,bottom-S*0.5,S*0.8);gr.addColorStop(0,'rgba(212,165,55,'+(0.28*up)+')');gr.addColorStop(1,'rgba(212,165,55,0)');g.fillStyle=gr;g.fillRect(0,0,1080,1920);}
+ g.save();g.translate(x,y);g.rotate(r);g.scale(sx,sy);g.drawImage(I[state],-S/2,-S,S,S);if(blink)g.drawImage(I.olhos_fechados_overlay,-S/2,-S,S,S);g.restore();
+ g.fillStyle='#161616';g.strokeStyle='#D4A537';g.lineWidth=4;g.beginPath();g.roundRect(120,1370,840,170,14);g.fill();g.stroke();
+ g.fillStyle='#F2E9D8';g.font='40px Archivo';g.textAlign='center';g.fillText('Esse celular caiu de R$ 1.500',540,1445);g.fillText('para R$ 1.050.',540,1500);
+};
+Promise.all([fetch('sync.json').then(r=>r.json()).then(j=>{SY=j;window.DUR=j.dur;}),...names.map(n=>new Promise(r=>{const im=new Image();im.onload=r;im.src='estados/'+n+'.png';I[n]=im;})),document.fonts.load('40px Archivo'),document.fonts.load('40px Anton')]).then(()=>window.READY=true);
+</script></body></html>
