@@ -13,6 +13,7 @@ Este dossiê foi escrito em 26/11/2026 para o Claude Code reconstruir o contexto
 - Tudo o que sai tem de seguir a estética Futgoat (seção 3). "Tudo que você tem em mente seja mudado pra estética que criamos." Linhas **finas e detalhadas**, nunca grossas.
 - Não mexer em `core/` nem `styles/` da biblioteca para um filme do usuário. Filmes ficam fora de `styles/`; sem crédito Lemo nem marca d'água.
 - Trabalha pelo celular/PC com planos limitados (ferramentas de imagem acabam o limite): peça poucas imagens por vez e dê prompts completos, prontos para colar.
+- **Formato das respostas:** o dono acha tabela e coluna feias. Sempre listinha simples, um item por linha com traço (ex.: "Segunda-feira - Prancheta"). Nada de tabela e nada de documento longo no chat.
 - Quando precisar trocar de modelo para construir/renderizar (Opus 5.5), avise-o: ele ajusta no `/model`.
 
 ## 2. Decisões fechadas
