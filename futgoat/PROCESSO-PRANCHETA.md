@@ -26,3 +26,16 @@ Regra fixa: todo vídeo tem mais de 1 minuto. Nenhum vídeo começa cru: sempre 
 
 ## Gancho semanal
 Toda semana o gancho é atualizado em fonte antes de gravar. Se a fonte não bater, o vídeo não sai.
+
+---
+
+# Processo do Legends (terça-feira)
+
+Mesmo processo da Prancheta, com estas diferenças:
+- Só lendas: jogadores aposentados ou de outra época. Jogador do momento não entra, porque vira notícia.
+- O gancho é a história do jogador: quem era, o que fez e por que importa, em frases curtas, sem biografia.
+- Não tem tática no meio. Se a tática aparecer, o vídeo vira Prancheta.
+- Sem foto de jogador real: a imagem é o Goat, uma silhueta ou uma ilustração em linha fina.
+- Títulos e datas sempre checados em fonte.
+- O mesmo jogador não volta em menos de dois meses, e o clube também tem rodízio.
+- Divisão de tempo, com mais de 60 s no total: gancho de 10 a 15 s, quem era de 20 a 25 s, história ou momento de 20 a 25 s, o que ganhou de 10 a 15 s, fecho de 5 a 8 s.
