@@ -105,3 +105,8 @@ Estou continuando o canal de futebol FUTGOAT (tagline "O melhor do futebol"; Tik
 
 7) Comece listando o que falta de mim (imagens de pose, decisões de voz/moldura/@) e o que você já pode fazer sozinho, e faça o que puder sem me perguntar nada.
 ```
+
+---
+## 10. Vocabulário para gerar no ElevenLabs (créditos do dono)
+Arquivo: `voz-banco/PARA-ELEVENLABS.txt` (5 blocos A–E, ~8 mil caracteres; 1 caractere = 1 crédito, a conferir no plano) e `voz-banco/vocabulario_elevenlabs.json`.
+Processo: o dono gera cada bloco no ElevenLabs com a voz James e as mesmas configurações, baixa um mp3 por bloco e manda ao Claude. O Claude transcreve com Whisper, corta por frase/palavra e monta o `index.json` do banco (mesma estrutura do `gerar_banco.py`). Gere o **bloco A primeiro**: confira a pronúncia de "Futgoat" e dos nomes antes de gastar o resto.
