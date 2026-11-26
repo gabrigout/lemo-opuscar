@@ -41,3 +41,25 @@ Mesmo processo da Prancheta, com estas diferenças:
 - Títulos e datas sempre checados em fonte.
 - O mesmo jogador não volta em menos de dois meses, e o clube também tem rodízio.
 - Duração mínima de 60 s, podendo ser mais. Divisão de tempo: gancho de 10 a 15 s, quem era de 20 a 25 s, história ou momento de 20 a 25 s, o que ganhou de 10 a 15 s, fecho de 5 a 8 s.
+
+---
+
+# Processo do Tribunal do Goat (quarta-feira)
+
+Formato inspirado em debate de TV, com estrutura e temas nossos. Nada de copiar roteiro, nome ou marca de outro programa.
+
+Estrutura:
+- Gancho, de 10 a 15 s: a pergunta da semana, sem responder ainda.
+- Lado A, de 25 a 30 s: dois argumentos, cada um com fato checado em fonte.
+- Lado B, de 25 a 30 s: dois argumentos, com o mesmo peso e tempo do lado A.
+- Veredito do Goat, de 10 a 15 s: a escolha e o critério usado, marcado como opinião dele.
+- Fecho, de 5 a 8 s: pergunta específica para comentar (ex.: "você ficaria com quem? Escreve o nome.").
+- Total: entre 75 e 90 s, sempre acima do mínimo de 60 s.
+
+Regras de revisão antes de render:
+- Cada fato com fonte.
+- Os dois lados com o mesmo tempo e peso.
+- Rodízio de clubes e de temas: temas de clube alternam entre clubes e estados.
+- Fotos só com licença livre, sem escudo.
+- Nenhum texto copiado de outro programa.
+- Roteiro aprovado pelo dono antes de render.
