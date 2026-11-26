@@ -92,3 +92,37 @@ Antes de render:
 - Sem texto copiado de outro canal.
 - Nenhuma foto sem licença, nenhum escudo.
 - Roteiro aprovado pelo dono.
+
+---
+
+# Processo do Giro da Semana (sexta-feira)
+
+Ver o que aconteceu na semana: os pontos principais, os pontos altos e as coisas legais.
+
+Critério do que entra (para não ficar subjetivo):
+- Resultado ou fato de impacto que a semana trouxe, checado em fonte oficial ou jornalística.
+- Recorde, lance ou história que virou assunto.
+- Polêmica só entra se for verificada, sem acusação sem fonte.
+
+Estrutura:
+- Gancho, de 10 a 15 s: a manchete mais forte da semana.
+- Pontos da semana, de 40 a 50 s: três ou quatro itens, cada um com um fato checado.
+- Fecho, de 5 a 8 s: pergunta específica sobre o destaque da semana.
+- Total: mais de 60 s.
+
+Antes de render: todos os fatos com fonte e data; nada que já foi tratado no Stories da semana sem atualização.
+
+# Processo do Quem Sou Eu? (sábado)
+
+Quiz de identidade com pistas. Um sábado publica a pergunta, e o seguinte publica a resposta junto com a próxima pergunta.
+
+Estrutura:
+- Gancho, de 10 a 15 s: "Quem sou eu?", com a silhueta.
+- Pistas, de 30 a 40 s: três pistas, da mais difícil para a mais fácil.
+- Pausa para o público tentar, de 5 s.
+- Silhueta e resposta: entram no sábado seguinte, com a pergunta nova.
+
+Regras de imagem:
+- Silhueta de jogador real só com foto de licença livre que permita derivado (ex.: CC BY-SA, com crédito). Sem licença, a silhueta é desenhada do zero em linha fina.
+- Escudo e camisa oficial nunca aparecem.
+- Pistas só com fatos verificados, sem vida privada de pessoa real.
