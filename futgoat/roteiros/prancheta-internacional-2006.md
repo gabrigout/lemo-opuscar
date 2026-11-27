@@ -3,8 +3,8 @@ Status: aprovado e em produção (27/11/2026). Versão final do Goat termina em 
 
 ## Roteiro (falas para a voz do Goat)
 
-[GANCHO, 23 s]
-"Hoje, em 2026, o Inter está numa situação complicada no Brasileirão. Faltam dois jogos: Bragantino, no Beira-Rio, no domingo, e Cruzeiro, no Mineirão, na quarta. O Inter precisa vencer, e ainda depende de tropeços de Grêmio, Mirassol ou Corinthians. Mas o torcedor colorado sabe: em 2006, esse mesmo clube venceu o Barcelona numa final de Mundial."
+[GANCHO, 11 s]
+"O Inter de hoje sofre no Brasileirão. Mas o Inter de 2006 fez o Barcelona sofrer, numa final de Mundial."
 
 [TÁTICA, 35 s]
 "Como um time vence o Barça sem ter a bola? Primeiro, o plano: deixar o Barça ter a bola. Segundo, o desenho: um 4-4-2, com dois atacantes, Pato e Iarley, prontos para sair em contra-ataque. Terceiro, a marcação: sem a bola, o Fernandão ficava perto do volante Thiago Motta, para ele não receber de frente. E o Pato e o Iarley ficavam soltos para sair na transição."
