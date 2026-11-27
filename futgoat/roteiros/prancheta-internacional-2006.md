@@ -4,18 +4,23 @@ Status: aguardando aprovação do dono. Não renderizar antes.
 ## Roteiro (falas para a voz do Goat)
 
 [GANCHO, 12 s]
-"Hoje, em 2026, o Inter está numa situação complicada no Brasileirão. Mas o torcedor colorado sabe: em 2006, esse mesmo clube venceu o Barcelona numa final de Mundial."
+"Hoje, em 2026, o Inter está numa situação complicada no Brasileirão. Mas o torcedor colorado tem uma história que é lore: em 2006, esse mesmo clube venceu o Barcelona numa final de Mundial. Plot twist, né?"
 
 [TÁTICA, 35 s]
-"Como um time vence o Barça sem ter a bola? Primeiro, o plano: abrir mão da posse. Segundo, o desenho: um 4-4-2 em losango, com três atacantes prontos para sair em contra-ataque. Terceiro, a marcação: sem a bola, o Fernandão ficava perto do volante Thiago Motta, para ele não receber de frente. E o Iarley ficava solto para sair na transição."
+"Como um time vence o Barça sem ter a bola? Primeiro, o plano: deixa o Barça ter a bola, tipo deixa ele fazer o trabalho braçal. Segundo, o desenho: um 4-4-2 em losango, com três atacantes prontos para sair em contra-ataque. Terceiro, a marcação: sem a bola, o Fernandão ficava perto do volante Thiago Motta, para ele não receber de frente. E o Iarley ficava solto para sair na transição, tipo sprint de final de jogo."
 
 [RESULTADO, 13 s]
-"O jogo terminou 1 a 0, com gol de Adriano Gabiru no segundo tempo. Diante de 67 mil pessoas, em Yokohama. No caminho, o Inter tinha vencido o Al-Ahly por 2 a 1 na semifinal. Foi o primeiro título mundial do clube."
+"O jogo terminou 1 a 0, com gol de Adriano Gabiru no segundo tempo. Diante de 67 mil pessoas, em Yokohama. Sim, sessenta e sete mil. O número mais brainrot do dia, e a história é real. No caminho, o Inter tinha vencido o Al-Ahly por 2 a 1 na semifinal. Foi o primeiro título mundial do clube."
 
 [FECHO, 8 s]
-"Um time que sabia sofrer sem a bola e atacar rápido. Esse plano ainda funciona hoje? Comenta aí."
+"Um time que sabia sofrer sem a bola e atacar rápido. Esse plano ainda funciona hoje? Comenta aí e segue o Futgoat. Sem spoiler, é o tipo de história que vira lore."
 
 Duração estimada: 68 s (acima do mínimo de 60 s).
+
+## Regras das piadas
+- Piada sobre o jogo, o número, o plano tático ou a linguagem da internet.
+- Nenhuma piada sobre a torcida, a crise do clube ou a classificação atual.
+- Nenhuma piada sobre jogador real.
 
 ## Checagens feitas
 - Data, local, placar, público, gol e semifinal: confirmados em fontes (FIFA, ESPN, Wikinotícias, Bolavip).
