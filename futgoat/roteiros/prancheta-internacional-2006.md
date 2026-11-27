@@ -1,10 +1,10 @@
 # Prancheta: Internacional x Barcelona, Mundial de Clubes 2006 (segunda-feira)
-Status: aguardando aprovação do dono. Não renderizar antes.
+Status: aprovado e em produção (27/11/2026). Versão final do Goat termina em "Comenta aí!" e segue com o encerramento da voz feminina.
 
 ## Roteiro (falas para a voz do Goat)
 
-[GANCHO, 12 s]
-"Hoje, em 2026, o Inter está numa situação complicada no Brasileirão. Mas o torcedor colorado sabe: em 2006, esse mesmo clube venceu o Barcelona numa final de Mundial."
+[GANCHO, 23 s]
+"Hoje, em 2026, o Inter está numa situação complicada no Brasileirão. Faltam dois jogos: Bragantino, no Beira-Rio, no domingo, e Cruzeiro, no Mineirão, na quarta. O Inter precisa vencer, e ainda depende de tropeços de Grêmio, Mirassol ou Corinthians. Mas o torcedor colorado sabe: em 2006, esse mesmo clube venceu o Barcelona numa final de Mundial."
 
 [TÁTICA, 35 s]
 "Como um time vence o Barça sem ter a bola? Primeiro, o plano: deixar o Barça ter a bola. Segundo, o desenho: um 4-4-2, com dois atacantes, Pato e Iarley, prontos para sair em contra-ataque. Terceiro, a marcação: sem a bola, o Fernandão ficava perto do volante Thiago Motta, para ele não receber de frente. E o Pato e o Iarley ficavam soltos para sair na transição."
@@ -23,6 +23,7 @@ Duração estimada: 68 s (acima do mínimo de 60 s).
 - Nenhuma piada sobre jogador real.
 
 ## Checagens feitas
+- Classificação de 27/11/2026 (imagem enviada pelo dono): Internacional 18º, 38 pts em 36 jogos; Corinthians, Grêmio e Mirassol com 41; Remo 32 em 37 jogos (não alcança o Inter). Próximos jogos: Internacional x Bragantino (Beira-Rio, 29/11) e Cruzeiro x Internacional (Mineirão, 2/12), segundo Claro, FutInter e site do clube; horário do dia 29 diverge entre fontes e não é citado.
 - Data, local, placar, público, gol e semifinal: confirmados em fontes (FIFA, ESPN, Wikinotícias, Bolavip).
 - Esquema 4-4-2: confirmado pela escalação publicada (quatro defensores, quatro no meio, dois atacantes). O losango foi removido, porque nenhuma das duas fontes confirma esse formato.
 - Papel de Fernandão e de Iarley: vem de relato da ESPN (Roberto Moreno). Confirmado em uma fonte.
