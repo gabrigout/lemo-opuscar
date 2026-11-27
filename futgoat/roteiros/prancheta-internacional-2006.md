@@ -10,7 +10,7 @@ Status: aguardando aprovação do dono. Não renderizar antes.
 "Como um time vence o Barça sem ter a bola? Primeiro, o plano: deixar o Barça ter a bola. Segundo, o desenho: um 4-4-2 em losango, com três atacantes prontos para sair em contra-ataque. Terceiro, a marcação: sem a bola, o Fernandão ficava perto do volante Thiago Motta, para ele não receber de frente. E o Iarley ficava solto para sair na transição."
 
 [RESULTADO, 13 s]
-"O jogo terminou 1 a 0, com gol de Adriano Gabiru no segundo tempo. Diante de 67 mil pessoas, em Yokohama. Sim, sessenta e sete mil. No caminho, o Inter tinha vencido o Al-Ahly por 2 a 1 na semifinal. Foi o primeiro título mundial do clube."
+"O jogo terminou 1 a 0, com gol de Adriano Gabiru no segundo tempo. Diante de six seven mil pessoas, em Yokohama. No caminho, o Inter tinha vencido o Al-Ahly por 2 a 1 na semifinal. Foi o primeiro título mundial do clube."
 
 [FECHO, 8 s]
 "Um time que sabia sofrer sem a bola e atacar rápido. Esse plano ainda funciona hoje? Comenta aí e segue o Futgoat."
