@@ -1,9 +1,12 @@
-# Voz do Goat (decidida em 27/11/2026)
+# Voz do Goat (decidida em 27/11/2026, substitui a decisão anterior)
 
-- Motor: Kokoro (kokoro-onnx), offline, Apache 2.0. Modelo: kokoro-v1.0.onnx e voices-v1.0.bin (Hugging Face: fastrtc/kokoro-onnx), em core/tts/.
-- Voz: pm_santa (masculina, pt-BR), lang "pt-br", speed 1.05.
-- Pós-processamento: pitch +3 semitons (ffmpeg rubberband=pitch=1.1892), saída 44,1 kHz.
-- Pronúncia: no texto enviado à voz, escrever "Gôut" no lugar de "Goat" e "Futgôut" no lugar de "Futgoat". Legendas usam o texto original.
-- Frases geradas uma a uma, com 0,35 s de pausa entre elas.
-- Encerramento continua com voz feminina (sem o Goat na tela).
-- Ferramentas: core/tts/tts.py gera as frases; a sincronia de boca e legenda usa o Whisper com o texto do roteiro como referência.
+- A voz do Goat é a **voz real do dono**, gravada no celular a partir do roteiro aprovado.
+- **Sem clonagem, sem mudança de tom, sem efeito.** Só uma limpeza leve que não deixe a voz robótica:
+  - redução de ruído suave (só o chiado de fundo);
+  - equalização leve (corte de grave abaixo de ~80 Hz, um pouco de clareza na voz);
+  - compressão suave e volume final em −14 LUFS (padrão das redes);
+  - corte de silêncios longos e respirações muito fortes.
+- Boca do Goat e legendas palavra a palavra seguem o tempo real da fala (Whisper), com a grafia do roteiro.
+- Como gravar: lugar silencioso, celular a ~20 cm, sempre na mesma posição; roteiro inteiro de uma vez, 1 s de pausa entre falas; se errar, repetir só a frase.
+- Encerramento continua com a voz feminina, sem o Goat na tela.
+- Histórico: Kokoro pm_santa e clones (Skylo, voz do dono) foram testados e descartados pelo dono.
